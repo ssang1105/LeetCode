@@ -13,11 +13,8 @@ class Solution {
         for (int i = 2; i < numRows; i++) {
           List<Integer> previousRow = results.get(i - 1);
           List<Integer> newRow = new ArrayList<>();
-          for (int j = 0; j < previousRow.size(); j++) {
-            if (j==0) {
-              newRow.add(1);
-              continue;
-            }
+          newRow.add(1);
+          for (int j = 1; j < previousRow.size(); j++) {
             newRow.add(previousRow.get(j-1) + previousRow.get(j));
           }
           newRow.add(1);
